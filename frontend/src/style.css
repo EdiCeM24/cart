@@ -178,6 +178,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
 }
 .card--price .price {
     color: var(--primary-color);
@@ -225,7 +226,7 @@ body {
     gap: 10px;
     margin-top: 1rem;
 }
-.cart-tems {
+.individual-cart-item {
     display: flex;
     justify-content: space-between;
     padding: 10px 5px;
@@ -240,6 +241,12 @@ body {
     position: absolute;
     bottom: 10px;
     width: 88%;
+}
+.cart-menu {
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
 }
 .total--amount {
     display: flex;
@@ -260,5 +267,12 @@ body {
     background: var(--accent-color);
     border-radius: 5px;
 }
-
+.remove-item {
+    background: var(--primary-color);
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 2px 8px;
+    cursor: pointer;
+    margin-left: 5px;
+}
 

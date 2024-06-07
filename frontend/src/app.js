@@ -50,7 +50,7 @@ document.addEventListener('DomContentLoader', () => {
                 CartItem.innerHTML = `
                  <span>($(item.quantity)x)${item.name}</span>;
                  <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2,)}
-                 <button class="remove-btn" data-index="${index}"><i class='fa-solid .fa-times'></i></button>
+                 <button class="remove-btn" data-index="${index}"><i class='fa-solid fa-times'></i></button>
                  </span>;
                 `;
 
@@ -69,7 +69,7 @@ document.addEventListener('DomContentLoader', () => {
         function removeItemFromCart(index) {
             const removeItem = CartItems.splice(index, 1)[0];
             totalAmount -= removeItem.price * removeItem.quantity;
-            updateCartUI;
+            updateCartUI();
         }
 
         function updateCartTotal() {
@@ -84,7 +84,7 @@ document.addEventListener('DomContentLoader', () => {
 
        const closeButton = document.querySelector('.sidebar-close');
        closeButton.addEventListener('click', () => {
-        sidebar.classList.remove()
+        sidebar.classList.remove('open')
        }); 
     });
 });
