@@ -67,7 +67,24 @@ document.addEventListener('DomContentLoader', () => {
         }
 
         function removeItemFromCart(index) {
-            const remove
+            const removeItem = CartItems.splice(index, 1)[0];
+            totalAmount -= removeItem.price * removeItem.quantity;
+            updateCartUI;
         }
+
+        function updateCartTotal() {
+            CartTotal.textContent = `
+             $${totalAmount.toFixed(2)}
+            `;
+        }
+
+        CartIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+       const closeButton = document.querySelector('.sidebar-close');
+       closeButton.addEventListener('click', () => {
+        sidebar.classList.remove()
+       }); 
     });
 });
